@@ -20,6 +20,14 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         array (
             'DeepCopy\\' => 9,
         ),
+        'A' => 
+        array (
+            'App\\Core\\Router\\' => 16,
+            'App\\Core\\' => 9,
+            'App\\Controllers\\' => 16,
+            'App\\Config\\' => 11,
+            'App\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -30,6 +38,26 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
+        ),
+        'App\\Core\\Router\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/core/router',
+        ),
+        'App\\Core\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/core',
+        ),
+        'App\\Controllers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/controllers',
+        ),
+        'App\\Config\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/config',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
