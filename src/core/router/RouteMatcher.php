@@ -5,6 +5,7 @@ namespace App\Core\Router;
 
 use App\Core\Request;
 use Closure;
+
 /**
  * Class RouteMatcher
  * Stores the registered routes and uses RouteDispatcher to match and execute them.
@@ -49,6 +50,6 @@ class RouteMatcher
      */
     public function run()
     {
-        $this->route_dispatcher->dispatch($this->routes);
+        echo $this->route_dispatcher->dispatch($this->routes);
     }
 }

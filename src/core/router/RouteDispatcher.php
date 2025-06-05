@@ -78,28 +78,27 @@ class RouteDispatcher
      */
     private function runRouteCallback(array $data, $params = null)
     {
-        array_map(function ($item) use ($params) {
-            [$className, $methodName] = $item;
+        [$className, $methodName] = $data[0];
 
-            $reflection = new ReflectionClass($className);
+        $reflection = new ReflectionClass($className);
 
-            // If method doesn't exist, return null
-            if (!$reflection->hasMethod($methodName)) {
-                return null;
-            }
+        // If method doesn't exist, return null
+        if (!$reflection->hasMethod($methodName)) {
+            return null;
+        }
 
-            // Instantiate the controller
-            $instance = $reflection->newInstance();
+        // Instantiate the controller
+        $instance = $reflection->newInstance();
 
-            // Get the method to invoke
-            $method = $reflection->getMethod($methodName);
+        // Get the method to invoke
+        $method = $reflection->getMethod($methodName);
 
-            // Invoke method with parameters if provided, else with request object
-            if ($params !== null) {
-                return $method->invokeArgs($instance, $params);
-            }
-            return $method->invokeArgs($instance, [$this->request]);
-        }, $data);
+        // Invoke method with parameters if provided, else with request object
+        if ($params !== null) {
+            return $method->invokeArgs($instance, $params);
+        }
+        return $method->invokeArgs($instance, [$this->request]);
+
     }
 
     /**
@@ -109,6 +108,6 @@ class RouteDispatcher
      */
     private function handelClosures(Closure $clouser)
     {
-        echo $clouser();
+        return $clouser();
     }
 }
