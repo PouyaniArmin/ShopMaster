@@ -16,10 +16,12 @@ class Web
         $this->app->router->routeMathecs->run();
     }
 
-    public function registerRoutes():void
+    public function registerRoutes(): void
     {
         $this->app->router->get('/', [HomeController::class, 'index']);
-        $this->app->router->get('/home/{id}',[HomeController::class,'test']);
-        $this->app->router->get('/home', function(){return "Hello World";});
+        $this->app->router->get('/home/{id}', [HomeController::class, 'test']);
+        $this->app->router->get('/home', function () {
+            return "Hello World";
+        });
     }
 }

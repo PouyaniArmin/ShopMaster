@@ -3,14 +3,20 @@
 
 namespace App\Controllers;
 
+use App\Core\Application;
+use App\Core\Controller;
 use App\Core\Request;
+use App\Core\ViewEngine\BaseView;
+use ViewManager;
 
-class HomeController{
-    public function index(Request $request){
-        echo "Home";
+class HomeController extends Controller
+{
+    public function index(Request $request)
+    {
+        return $this->view('home');
     }
-    public function test($id){
-        echo "test: $id";
+    public function test($id)
+    {
+        return "test: $id";
     }
 }
-

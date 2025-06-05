@@ -22,6 +22,7 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         ),
         'A' => 
         array (
+            'App\\Core\\ViewEngine\\' => 20,
             'App\\Core\\Router\\' => 16,
             'App\\Core\\' => 9,
             'App\\Controllers\\' => 16,
@@ -38,6 +39,10 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
+        ),
+        'App\\Core\\ViewEngine\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/core/viewEngine',
         ),
         'App\\Core\\Router\\' => 
         array (
