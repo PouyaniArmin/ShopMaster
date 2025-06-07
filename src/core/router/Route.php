@@ -16,7 +16,7 @@ class Route
     /**
      * @var RouteMatcher Handles route storage and matching.
      */
-    public $routeMathecs;
+    public $routeMatches;
 
     /**
      * Route constructor.
@@ -27,7 +27,7 @@ class Route
 
     public function __construct(Request $request)
     {
-        $this->routeMathecs = new RouteMatcher($request);
+        $this->routeMatches = new RouteMatcher($request);
     }
     /**
      * Registers a GET route.
@@ -37,7 +37,7 @@ class Route
      */
     public function get(string $path, array|Closure $callback): void
     {
-        $this->routeMathecs->addRoute('get', $path, $callback);
+        $this->routeMatches->addRoute('get', $path, $callback);
     }
     /**
      * Registers a POST route.
@@ -47,6 +47,6 @@ class Route
      */
     public function post(string $path, array|Closure $callback): void
     {
-        $this->routeMathecs->addRoute('post', $path, $callback);
+        $this->routeMatches->addRoute('post', $path, $callback);
     }
 }

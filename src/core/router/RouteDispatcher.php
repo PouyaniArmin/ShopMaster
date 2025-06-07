@@ -60,7 +60,7 @@ class RouteDispatcher
             if ($key === $this->request->path()) {
                 // If the callback is a Closure, handle it directly
                 if ($value[0] instanceof Closure) {
-                    return $this->handelClosures($value[0]);
+                    return $this->handleClosures($value[0]);
                 }
 
                 // Otherwise, run the callback which is a controller method
@@ -106,7 +106,7 @@ class RouteDispatcher
      *
      * @param Closure $clouser The Closure callback to execute.
      */
-    private function handelClosures(Closure $clouser)
+    private function handleClosures(Closure $clouser)
     {
         return $clouser();
     }

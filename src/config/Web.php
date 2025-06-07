@@ -13,7 +13,7 @@ class Web
         $this->app = new Application($root);
         $this->registerRoutes();
         // call method run call RouteMatcges  later ititlaziton routes path 
-        $this->app->router->routeMathecs->run();
+        $this->app->router->routeMatches->run();
     }
 
     public function registerRoutes(): void
