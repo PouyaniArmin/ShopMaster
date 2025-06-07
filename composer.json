@@ -4,7 +4,9 @@
       "App\\": "src/",
       "App\\Core\\": "src/core/",
       "App\\Core\\Router\\": "src/core/router/",
+      "App\\Core\\Router\\": "src/core/router/",
       "App\\Core\\ViewEngine\\": "src/core/viewEngine/",
+      "App\\Core\\Database\\": "src/core/database/",
       "App\\Config\\": "src/config/", 
       "App\\Controllers\\": "src/controllers/" 
     }

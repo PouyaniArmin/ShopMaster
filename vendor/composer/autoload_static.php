@@ -39,6 +39,7 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         array (
             'App\\Core\\ViewEngine\\' => 20,
             'App\\Core\\Router\\' => 16,
+            'App\\Core\\Database\\' => 18,
             'App\\Core\\' => 9,
             'App\\Controllers\\' => 16,
             'App\\Config\\' => 11,
@@ -86,6 +87,10 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         'App\\Core\\Router\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/core/router',
+        ),
+        'App\\Core\\Database\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/core/database',
         ),
         'App\\Core\\' => 
         array (

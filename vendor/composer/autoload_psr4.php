@@ -16,6 +16,7 @@ return array(
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
     'App\\Core\\ViewEngine\\' => array($baseDir . '/src/core/viewEngine'),
     'App\\Core\\Router\\' => array($baseDir . '/src/core/router'),
+    'App\\Core\\Database\\' => array($baseDir . '/src/core/database'),
     'App\\Core\\' => array($baseDir . '/src/core'),
     'App\\Controllers\\' => array($baseDir . '/src/controllers'),
     'App\\Config\\' => array($baseDir . '/src/config'),
