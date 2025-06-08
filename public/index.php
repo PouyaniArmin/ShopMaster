@@ -1,7 +1,11 @@
 <?php
 
 use App\Config\Web;
+use Dotenv\Dotenv;
 
-require_once __DIR__."/../vendor/autoload.php";
+require_once __DIR__ . "/../vendor/autoload.php";
 
-$web=new Web(__DIR__);
+$dotenv = Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv->load();
+
+$web = new Web(__DIR__);
