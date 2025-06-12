@@ -3,6 +3,7 @@
 namespace App\Core\Router;
 
 use App\Core\Request;
+use App\Core\Response;
 use App\Core\Router\RouteMatcher;
 use App\Core\Router\RouterInterface;
 use Closure;
@@ -25,9 +26,9 @@ class Route
      * @param Request $request The HTTP request instance.
      */
 
-    public function __construct(Request $request)
+    public function __construct(Request $request,Response $response)
     {
-        $this->routeMatches = new RouteMatcher($request);
+        $this->routeMatches = new RouteMatcher($request,$response);
     }
     /**
      * Registers a GET route.
@@ -35,9 +36,9 @@ class Route
      * @param string $path The route path (e.g., '/home').
      * @param array|Closure $callback The callback to execute for this route.
      */
-    public function get(string $path, array|Closure $callback): void
+    public function get(string $path, array|Closure $callback,array $middleware=[]): void
     {
-        $this->routeMatches->addRoute('get', $path, $callback);
+        $this->routeMatches->addRoute('get', $path, $callback,$middleware);
     }
     /**
      * Registers a POST route.
@@ -45,7 +46,7 @@ class Route
      * @param string $path The route path (e.g., '/submit').
      * @param array|Closure $callback The callback to execute for this route.
      */
-    public function post(string $path, array|Closure $callback): void
+    public function post(string $path, array|Closure $callback,array $middleware=[]): void
     {
         $this->routeMatches->addRoute('post', $path, $callback);
     }

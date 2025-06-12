@@ -4,6 +4,7 @@
 namespace App\Core\Router;
 
 use App\Core\Request;
+use App\Core\Response;
 use Closure;
 
 /**
@@ -28,9 +29,9 @@ class RouteMatcher
      *
      * @param Request $request The current HTTP request instance.
      */
-    public function __construct(Request $request)
+    public function __construct(Request $request,Response $response)
     {
-        $this->route_dispatcher = new RouteDispatcher($request);
+        $this->route_dispatcher = new RouteDispatcher($request,$response);
     }
 
     /**
@@ -40,9 +41,9 @@ class RouteMatcher
      * @param string $path The route path pattern.
      * @param array|Closure $callback The callback to execute when route matches.
      */
-    public function addRoute(string $method, string $path, array|Closure $callback)
+    public function addRoute(string $method, string $path, array|Closure $callback,array $middleware=[])
     {
-        $this->routes[$method][$path] = [$callback];
+        $this->routes[$method][$path] = [$callback,'middleware'=>$middleware];
     }
 
     /**
