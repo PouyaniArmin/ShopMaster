@@ -13,7 +13,7 @@ use PhpParser\Node\Expr\FuncCall;
 class DatabaseConnection
 {
     private static ?DatabaseConnection $db_connection = null;
-    private DatabaseStrategyInterface $strategy;
+    private ?DatabaseStrategyInterface $strategy=null;
     private PDO $pdo;
     private function __construct() {}
     public static function getInstance(): DatabaseConnection
@@ -24,7 +24,7 @@ class DatabaseConnection
         return self::$db_connection;
     }
 
-    public function setSterategy(DatabaseStrategyInterface $strategy): void
+    public function setStrategy(DatabaseStrategyInterface $strategy): void
     {
         $this->strategy = $strategy;
     }
