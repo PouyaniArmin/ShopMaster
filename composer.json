@@ -7,8 +7,11 @@
       "App\\Core\\ViewEngine\\": "src/core/viewEngine/",
       "App\\Core\\Database\\": "src/core/database/",
       "App\\Core\\Middleware\\": "src/core/middleware/",
+      "App\\Core\\Repository\\": "src/core/repository/",
+      "App\\Core\\Utility\\": "src/core/utility/",
       "App\\Config\\": "src/config/", 
-      "App\\Controllers\\": "src/controllers/" 
+      "App\\Controllers\\": "src/controllers/", 
+      "App\\Models\\": "src/models/" 
     }
   },
   "require-dev": {

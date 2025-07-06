@@ -37,8 +37,11 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         ),
         'A' => 
         array (
+            'App\\Models\\' => 11,
             'App\\Core\\ViewEngine\\' => 20,
+            'App\\Core\\Utility\\' => 17,
             'App\\Core\\Router\\' => 16,
+            'App\\Core\\Repository\\' => 20,
             'App\\Core\\Middleware\\' => 20,
             'App\\Core\\Database\\' => 18,
             'App\\Core\\' => 9,
@@ -81,13 +84,25 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
+        'App\\Models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/models',
+        ),
         'App\\Core\\ViewEngine\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/core/viewEngine',
         ),
+        'App\\Core\\Utility\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/core/utility',
+        ),
         'App\\Core\\Router\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/core/router',
+        ),
+        'App\\Core\\Repository\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/core/repository',
         ),
         'App\\Core\\Middleware\\' => 
         array (
