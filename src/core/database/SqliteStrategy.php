@@ -18,7 +18,7 @@ class SqliteStrategy implements DatabaseStrategyInterface
             $this->conn = new PDO('sqlite:' . dirname(Application::$app->basePath) . "/" . $_ENV['DB_DATABASE']);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
-            throw new Exception("Failed to connect to SQLite");
+            throw new Exception("Failed to connect to SQLite {$e->getMessage()}");
         }
         return $this->conn;
     }
