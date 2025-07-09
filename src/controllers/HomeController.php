@@ -17,13 +17,18 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
-       $repository=new Repository(new UserModel);
-        // $repository->findAll();
-        // $repository->findById(5);
-        // $repository->create(['name'=>'armin','age'=>18]);
-        // $repository->update(5,['name'=>'armin','age'=>18]);
-        $repository->delete(5);
-       return $this->view('home');
+        $data = [
+            ['type' => 'where', 'column' => 'id', 'operator' => '=', 'value' => 1],
+            ['type' => 'and', 'column' => 'name', 'operator' => '=', 'value' => 'armin']
+        ];
+        $inset_data = ['name' => 'sara'];
+        $filters = [
+            ['type' => 'where', 'column' => 'id', 'operator' => '>', 'value' => 10],
+            ['type' => 'and', 'column' => 'name', 'operator' => '=', 'value' => 'test'],
+            ['type' => 'or', 'column' => 'id', 'operator' => '<', 'value' => 2]
+        ];
+        $repository = new Repository(new UserModel);
+        return $this->view('home');
     }
     public function test($id)
     {
